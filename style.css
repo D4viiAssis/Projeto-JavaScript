@@ -1,9 +1,9 @@
 body {
- background-image: linear-gradient(
-        rgb(101, 18, 18),
-        rgb(32, 5, 5)
-    );
-    height: 100vh;
+    background-image: radial-gradient(circle at center, #212131 0%, #000000 100%);
+    min-height: 100vh;
+    margin: 0;                   
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
     color: white;
     font-family: sans-serif;
     display: flex;
@@ -52,6 +52,16 @@ button {
 #cover {
     width: 350px;
     height: 350px;
+    border: solid white 0.5em;
+    filter: brightness(1.2);
+    transition: all 0.2s ease-in-out;
+}
+
+#cover:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* Aumenta a imagem em 5% */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4); /* Brilho branco suave */
+    filter: brightness(1.1); /* Dá uma leve "acesa" na foto */
 }
 
 #playlist-title {
@@ -59,6 +69,7 @@ button {
     flex-direction: row;
     justify-content: center;
     margin: 1em 0 4em 0;
+    font-size: 1.2em;
 }
 
 #song-name {
@@ -105,4 +116,19 @@ button {
     margin-top: 0.5em;
 
 
+}
+
+button:hover {
+    transform: scale(1.1); 
+    transition: transform 0.2s ease; 
+    filter: brightness(1.2);
+}
+
+button:active {
+    transform: scale(0.95); 
+}
+
+#progress-container:hover #progress-bar {
+    height: 6px;
+    transition: height 0.2s ease;
 }
