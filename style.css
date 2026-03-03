@@ -37,6 +37,7 @@ button {
 }
 .button {
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 .button-navigate {
@@ -50,6 +51,7 @@ button {
 
 #cover {
     width: 350px;
+    height: 350px;
 }
 
 #playlist-title {
@@ -73,13 +75,25 @@ button {
     height: 3px;
     width: 100%;
     border-radius: 25px;
-    margin-bottom: 1em;
 }
 
 #current-progress {
+    --progress: 0%;
     background-color: white;
     height: inherit;
-    width: 50%;
+    width: var(--progress);
     border-radius: inherit;
+
+}
+
+#progress-container {
+    padding: 1em;
+    cursor: pointer;
+
+}
+
+.button-active {
+    color: rgb(24, 178, 37);
+
 
 }
