@@ -3,39 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Music Player</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="music-info">
-        <h4 id="playlist-title">My Playlist</h4>
-        <img alt="Disc Cover" id="cover" alt="">
-        <audio alt="" id="audio"></audio>
-        <div id="below-cover">
-            <div>
-                <div id="song-name">Nome da música</div>
-                <div id="band-name" class="light-color">Nome do autor</div>
+    <section class="player-container">
+        <header class="player-header">
+            <h1 id="playlist-title">My Playlist</h1>
+        </header>
+
+        <article class="main-content">
+            <img src="" alt="Album Cover" id="cover" class="cover-art">
+            <audio id="audio"></audio>
+            
+            <div class="track-info">
+                <div class="text-group">
+                    <strong id="song-name">Song Name</strong>
+                    <span id="band-name" class="artist-name">Artist Name</span>
+                </div>
+                <button class="btn" id="like-button">
+                    <i class="bi bi-heart"></i>
+                </button>
             </div>
-            <button class="button light-color" id="like-button"><i class="bi bi-heart"></i></button>
-        </div>
-        <div id="progress-container">
-            <div id="progress-bar">
-                <div id="current-progress"></div>
+        </article>
+
+        <section class="progress-area">
+            <div class="progress-container" id="progress-container">
+                <div class="progress-bar" id="current-progress"></div>
             </div>
-            <div id="time-box"> 
-                <div id="song-time">00:00:00</div>
-                <div id="total-time">00:00</div>
+            <div class="time-wrapper"> 
+                <span id="song-time">00:00:00</span>
+                <span id="total-time">00:00:00</span>
             </div>
-        </div>
-        <div id="buttons-div">
-            <button id="shuffle-button" class="button"><i class="bi bi-shuffle"></i></button>
-            <button id="previous-button" class="button button-navigate" ><i class="bi bi-skip-start-fill"></i></button>
-            <button id="play-button" class=" button button-biggest" ><i class="bi bi-play-circle-fill"></i></button>
-            <button id="next-button" class="button button-navigate"><i class="bi bi-skip-end-fill"></i></button>
-            <button id="repeat-button" class="button"><i class="bi bi-repeat" ></i></button>
-            </button>
-    </div>
+        </section>
+
+        <section class="controls">
+            <button id="shuffle-button" class="btn"><i class="bi bi-shuffle"></i></button>
+            <button id="previous-button" class="btn btn-nav"><i class="bi bi-skip-start-fill"></i></button>
+            <button id="play-button" class="btn btn-main"><i class="bi bi-play-circle-fill"></i></button>
+            <button id="next-button" class="btn btn-nav"><i class="bi bi-skip-end-fill"></i></button>
+            <button id="repeat-button" class="btn"><i class="bi bi-repeat"></i></button>
+        </section>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
